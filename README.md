@@ -36,15 +36,7 @@ NVIDIA Nemotron-Personas-Japan データセット（100万人の日本人合成�
 
 ### 2. Claude Desktopにスキルを追加
 
-このリポジトリをZIP化してClaude Desktopにアップロードします。
-
-```bash
-git clone https://github.com/YOUR_USERNAME/nemotron-researcher-skill.git
-cd nemotron-researcher-skill
-zip -r ../nemotron-researcher-skill.zip .
-```
-
-または、[Releases](https://github.com/YOUR_USERNAME/nemotron-researcher-skill/releases)からZIPファイルをダウンロードしてください。
+このリポジトリをDownload ZipでダウンロードてClaude Desktopにアップロードします。
 
 ## ファイル構成
 
