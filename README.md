@@ -90,54 +90,6 @@ Claudeがターゲットセグメントと質問を確認し、ペルソナを�
 
 Claudeがコンセプトの詳細を確認し、多様なペルソナからの反応をシミュレートし、セグメント別の受容性分析レポートを生成します。
 
-## スクリプト直接実行
-
-CLIから直接スクリプトを実行することもできます：
-
-```bash
-# 介護職のペルソナを100件取得（Markdown形式）
-python scripts/fetch_personas.py \
-  --token "YOUR_HF_TOKEN" \
-  --occupation "介護職" \
-  --sample 100 \
-  --output markdown
-
-# 東京都の20-35歳を取得（JSON形式）
-python scripts/fetch_personas.py \
-  --token "YOUR_HF_TOKEN" \
-  --prefecture "東京都" \
-  --age-min 20 \
-  --age-max 35 \
-  --output json \
-  --pretty
-
-# 特定フィールドのみ取得
-python scripts/fetch_personas.py \
-  --token "YOUR_HF_TOKEN" \
-  --occupation "エンジニア" \
-  --fields uuid,age,occupation,professional_persona,skills_and_expertise_list \
-  --sample 50
-```
-
-### スクリプトオプション
-
-| オプション | 説明 |
-|-----------|------|
-| `--token` | **必須**: HuggingFaceアクセストークン |
-| `--occupation` | 職業キーワード（部分一致） |
-| `--prefecture` | 都道府県（完全一致、例: 東京都） |
-| `--region` | 地域（例: 関東地方） |
-| `--age-min` | 最小年齢 |
-| `--age-max` | 最大年齢 |
-| `--sex` | 性別（男/女 または male/female） |
-| `--education` | 学歴キーワード（部分一致） |
-| `--marital-status` | 婚姻状況 |
-| `--sample` | 取得件数（デフォルト: 100） |
-| `--output` | 出力形式: json/csv/markdown |
-| `--fields` | 出力フィールド（カンマ区切り） |
-| `--seed` | ランダムシード（デフォルト: 42） |
-| `--pretty` | JSON整形出力 |
-
 ## データセットについて
 
 ### Nemotron-Personas-Japan
